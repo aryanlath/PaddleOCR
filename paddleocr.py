@@ -542,7 +542,7 @@ class PaddleOCR(predict_system.TextSystem):
                 dt_boxes, elapse = self.text_detector(img)
                 tmp_res = [box.tolist() for box in dt_boxes]
                 ocr_res.append(tmp_res)
-            return ocr_res
+            return ocr_res, elapse
         else:
             ocr_res = []
             cls_res = []
